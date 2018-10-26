@@ -1,0 +1,15 @@
+server:
+   port: 8099
+#配置数据库
+spring:
+   application:
+      name: PersonalProject
+   datasource:
+      url: jdbc:mysql://127.0.0.1:3306/garyh?characterEncoding=UTF-8
+      username: root
+      password: garyhu
+      driverClassName: com.mysql.jdbc.Driver
+      max-active: 20
+      max-idle: 8
+      min-idle: 8
+      initial-size: 10
