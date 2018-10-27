@@ -19,7 +19,7 @@ public class ResponseUtils {
         return result;
     }
 
-    public static Result fail(String message,int code){
+    public static Result warn(String message,int code){
         Result result = new Result();
         result.setCode(code);
         result.setMessage(message);
