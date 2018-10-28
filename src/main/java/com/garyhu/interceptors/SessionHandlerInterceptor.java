@@ -1,5 +1,6 @@
 package com.garyhu.interceptors;
 
+import com.garyhu.entity.Student;
 import com.garyhu.pojo.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -10,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 public class SessionHandlerInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
-        User user = (User) request.getSession().getAttribute("user");
-        if(user == null){
+        Student st = (Student) request.getSession().getAttribute("student");
+        if(st == null){
             response.sendRedirect("/user/login.html");
             return false;
         }
