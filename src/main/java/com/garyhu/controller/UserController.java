@@ -65,4 +65,9 @@ public class UserController  {
         AccessTokenBean accessTokenBean = new AccessTokenBean();
         return ResponseUtils.success(accessTokenBean);
     }
+
+    @GetMapping("/login.html")
+    public String loginPage(){
+        return "user/login";
+    }
 }
