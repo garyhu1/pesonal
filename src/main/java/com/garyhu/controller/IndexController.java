@@ -13,9 +13,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class IndexController {
 
-    @GetMapping("/admin/getName/{userId}")
+    @GetMapping("/att/getName/{userId}")
     @ResponseBody
     public String getName(@PathVariable("userId")Integer userId){
         return userId+":garyhu";
+    }
+
+    @GetMapping("/att/test")
+    public String redirectUrl(){
+        return "redirect:/user/login.html";
     }
 }
