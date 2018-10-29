@@ -9,6 +9,7 @@ import java.util.List;
  * @decripetion :
  * @since : 2018/10/28
  **/
+@Entity
 public class Department {
 
     @Id

@@ -1,7 +1,6 @@
 package com.garyhu.interceptors;
 
 import com.garyhu.entity.Student;
-import com.garyhu.pojo.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 

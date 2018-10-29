@@ -21,7 +21,7 @@ import java.util.List;
 public interface UserRepository extends JpaRepository<User,Integer> {
 
     // 在方法上使用@Query注解的JPQL写法
-    @Query("select u from User u where u.name=?1 and u.department_id=?2")
+    @Query("select u from User u where u.name=?1 and u.departmentId=?2")
     public User findUser(String name,Integer departmentId);
 
     // 如果比较喜欢SQL写法而不是JPQL,可设置@Query的nativeQuery属性值为true
@@ -37,7 +37,7 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     public List<Object[]> queryUserCount();
 
     // 查询时可以使用Pageable和Sort来完成翻页和排序
-    @Query("select u from User u where u.department.id=?id")
+    @Query("select u from User u where u.departmentId=?id")
     public Page<User> queryUsers(Integer departmentId,Pageable page);
 
     // @Query 还允许更新、删除语句，此时需要搭配@Modifying使用
