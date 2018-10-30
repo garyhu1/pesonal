@@ -41,3 +41,5 @@ teacher:
    id: 1112
 water:
    height: 1120
+api:
+   book: http://127.0.0.1:8820
