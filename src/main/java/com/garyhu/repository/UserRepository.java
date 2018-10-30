@@ -37,7 +37,7 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     public List<Object[]> queryUserCount();
 
     // 查询时可以使用Pageable和Sort来完成翻页和排序
-    @Query("select u from User u where u.departmentId=?id")
+    @Query("select u from User u where u.departmentId=?1")
     public Page<User> queryUsers(Integer departmentId,Pageable page);
 
     // @Query 还允许更新、删除语句，此时需要搭配@Modifying使用
