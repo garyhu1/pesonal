@@ -18,7 +18,7 @@ public class MyRedisChannelListener implements MessageListener{
             String msg = new String(body,"UTF-8");
             String channel = new String(ch,"UTF-8");
 
-            System.out.println("get a message : "+msg+"from "+channel);
+            System.out.println("get a message : "+msg+" from "+channel);
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -21,7 +21,7 @@ import java.util.Map;
 /**
  * @author : Administrator
  * @since : 2018/11/4
- * @decripetion : 测试Redis
+ * @decripetion : 测试Redis StringRedisTemplate
  * StringRedisTemplate操作的都是字符串
  **/
 @Controller
@@ -82,23 +82,10 @@ public class RedisController {
     // 测试Redis的Pub/Sub，通过convertAndSend来发送消息
     @GetMapping("/pubsub")
     public @ResponseBody String sub(){
+
+        // 发送一条消息，在MyRedisChannelListener中接收发送的消息
         srt.convertAndSend("news","hello,world");
 
         return "success";
-    }
-
-    @Bean
-    public MessageListenerAdapter messageListenerAdapter(){
-        return new MessageListenerAdapter(new MyRedisChannelListener());
-    }
-
-    @Bean
-    public RedisMessageListenerContainer container(RedisConnectionFactory factory,
-                                                   MessageListenerAdapter adapter){
-        RedisMessageListenerContainer container = new RedisMessageListenerContainer();
-
-        container.setConnectionFactory(factory);
-        container.addMessageListener(adapter,new PatternTopic("news.*"));
-        return container;
     }
 }

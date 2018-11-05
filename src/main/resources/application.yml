@@ -41,7 +41,7 @@ spring:
       port: 6379
       # 最大连接数
       pool:
-         max-active: 8
+         max-active: 8 # 0表示无限制
 # 自定义的配置
 teacher:
    name: jackon
