@@ -59,4 +59,12 @@ public class StudentController {
 
         return result;
     }
+
+    @GetMapping("/myStudent")
+    public Result myStudent(@RequestParam("id") Integer id){
+        Student student = studentRepository.findOne(id);
+
+        Result result = ResponseUtils.success(student);
+        return result;
+    }
 }
