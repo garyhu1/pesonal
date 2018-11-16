@@ -5,10 +5,7 @@ import com.garyhu.pojo.Result;
 import com.garyhu.repository.StudentRepository;
 import com.garyhu.utils.ResponseUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -44,5 +41,22 @@ public class StudentController {
         Result success = ResponseUtils.success(save);
 
         return success;
+    }
+
+    @GetMapping("/student")
+    public Result student(@RequestParam("name")String name,@RequestParam("age")Integer age){
+        Student student = studentRepository.getStudentByNameAndAge(name, age);
+        Result result = ResponseUtils.success(student);
+
+        return result;
+    }
+
+    @PostMapping("/obtainStudent")
+    public Result obtainStudent(@RequestBody Student student){
+        Student st = studentRepository.save(student);
+
+        Result result = ResponseUtils.success(st);
+
+        return result;
     }
 }
