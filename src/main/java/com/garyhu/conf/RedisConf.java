@@ -60,9 +60,7 @@ public class RedisConf {
      * 设置默认的RedisTemplate的key的序列化策略为StringRedisSerializer
      */
     @Bean("strKeyRedisTemplate")
-    public RedisTemplate<Object,Object> strKeyRedisTemplate(
-            RedisConnectionFactory redisConnectionFactory
-    ) throws UnknownHostException {
+    public RedisTemplate<Object,Object> strKeyRedisTemplate(RedisConnectionFactory redisConnectionFactory) throws UnknownHostException {
         RedisTemplate<Object,Object> template = new RedisTemplate<>();
         template.setConnectionFactory(redisConnectionFactory);
         RedisSerializer<String> stringSerializer = new StringRedisSerializer();
@@ -75,9 +73,7 @@ public class RedisConf {
      * 以下代码是使用jackson作为默认的序列化方式
      */
     @Bean("jsonRedisTemplate")
-    public RedisTemplate<Object,Object> redisTemplate(
-            RedisConnectionFactory redisConnectionFactory
-    )throws UnknownObjectException{
+    public RedisTemplate<Object,Object> redisTemplate(RedisConnectionFactory redisConnectionFactory)throws UnknownObjectException{
         RedisTemplate<Object,Object> template = new RedisTemplate<>();
         template.setConnectionFactory(redisConnectionFactory);
         template.setDefaultSerializer(new GenericJackson2JsonRedisSerializer());

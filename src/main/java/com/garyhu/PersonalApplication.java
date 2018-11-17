@@ -4,13 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author: garyhu
  * @since: 2018/10/26 0026
  * @decription: 1、打包成war包时需要集成SpringBootServletInitializer，实现configure方法
  */
-
+@EnableDiscoveryClient
 @SpringBootApplication
 public class PersonalApplication extends SpringBootServletInitializer {
 
