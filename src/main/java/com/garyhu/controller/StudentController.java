@@ -6,6 +6,7 @@ import com.garyhu.repository.StudentRepository;
 import com.garyhu.utils.ResponseUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +24,9 @@ public class StudentController {
 
     @Resource
     StudentRepository studentRepository;
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     @GetMapping("/getStudent")
     public Result<Student> getStudent(@RequestParam(value = "id")int id){
@@ -76,5 +80,13 @@ public class StudentController {
     public void sayHello(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter writer = response.getWriter();
         writer.write("hello world!");
+    }
+
+    /**
+     * 该接口测试通过JVM微服务调用非JVM微服务接口
+     */
+    @GetMapping("/test")
+    public String findNode(){
+        return restTemplate.getForObject("http://microservice-simple-consumer-movie/",String.class);
     }
 }
