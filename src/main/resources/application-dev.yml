@@ -25,10 +25,14 @@ server:
 spring:
    application:
       name: PersonalProject
+   http:
+      multipart:
+         max-file-size: 2000Mb          # 默认为1M
+         max-request-size: 2500Mb       #  默认为10M
    datasource:
       url: jdbc:mysql://127.0.0.1:3306/garyh?characterEncoding=UTF-8
       username: root
-      password: garyhu
+      password: admin
       driverClassName: com.mysql.jdbc.Driver
       max-active: 20
       max-idle: 8

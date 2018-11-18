@@ -8,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * @author: garyhu
@@ -66,5 +70,11 @@ public class StudentController {
 
         Result result = ResponseUtils.success(student);
         return result;
+    }
+
+    @GetMapping("/api/sayHello")
+    public void sayHello(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        PrintWriter writer = response.getWriter();
+        writer.write("hello world!");
     }
 }
