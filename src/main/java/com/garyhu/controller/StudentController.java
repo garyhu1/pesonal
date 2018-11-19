@@ -89,4 +89,10 @@ public class StudentController {
     public String findNode(){
         return restTemplate.getForObject("http://microservice-simple-consumer-movie/",String.class);
     }
+
+    @GetMapping("/api/student")
+    public Student getStudentById(@RequestParam(value = "id",required = true)Integer id){
+        Student s = studentRepository.findOne(id);
+        return s;
+    }
 }
