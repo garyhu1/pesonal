@@ -131,11 +131,23 @@
       <artifactId>spring-cloud-starter-sleuth</artifactId>
     </dependency>
 
-    <!--sleuth zipkin-->
+    <!--sleuth stream-->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+      <artifactId>spring-cloud-sleuth-stream</artifactId>
     </dependency>
+
+    <!--stream binder rabbit-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-stream-binder-rabbit</artifactId>
+    </dependency>
+
+    <!--sleuth zipkin--><!--使用中间件时注释该依赖-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework.cloud</groupId>-->
+      <!--<artifactId>spring-cloud-sleuth-zipkin</artifactId>-->
+    <!--</dependency>-->
 
     <dependency>
       <groupId>junit</groupId>

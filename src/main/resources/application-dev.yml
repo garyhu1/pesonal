@@ -46,8 +46,14 @@ spring:
       # 最大连接数
       pool:
          max-active: 8 # 0表示无限制
-   zipkin:
-      base-url: http://localhost:9411 # 指定zipkin的地址
+   # 采用消息中间件来收集时，注释该配置
+   #zipkin:
+      #base-url: http://localhost:9411 # 指定zipkin的地址
+   rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
    sleuth:
       sampler:
          percentage: 1.0   # 指定需采样的请求百分比，默认值是0.1，即10%
@@ -61,6 +67,8 @@ water:
 api:
    book: http://127.0.0.1:8820
 eureka:
+   instance: # 自定义instance ID 默认为 {spring.cloud.client.hostname}:{spring.application.name}:{port}
+      instance-id: garyhu
    client:
       serviceUrl:
          defaultZone: http://garyhu:pass123@peer1:8761/eureka/,http://garyhu:pass123@peer2:8762/eureka/

@@ -15,7 +15,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponents;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +38,13 @@ public class BookController {
     RestTemplateBuilder restTemplateBuilder;
 
     @Value("${api.book}")
-    String base;
+    public String base;
+
+    @GetMapping("/mybook")
+    @ResponseBody
+    public String book(){
+        return this.base;
+    }
 
     // 获取
     @GetMapping("/get/{bookId}")

@@ -75,3 +75,46 @@
 ## 多环境部署
  **备注**
 先注释了devtools依赖
+
+##  读取配置文件的值
+
+### Placeholder方式 ： ${...}
+@Value("${}")
+
+### 在配置中，各参数之间可以使用Placeholder表达式来调用
+例如：
+```
+book.auth=lidar
+book.name=sea
+book.desc=${book.auth} born in USA
+```
+
+### 生成随机数
+**随机字符**
+`my.value=${random.value}`
+**随机int**
+`my.number=${random.int}`
+**随机long**
+`my.bignumber=${random.long}`
+**10以内的随机数**
+`my.number10=${random.int(10)}`
+**10-20的随机数**
+`my.number20=${random.int(10,20)}`
+
+## RestTemplate
+
+### getForEntity(URI url,Class responseType);
+生成URI:
+例：
+```
+UriComponents uriComponents = UriComponentsBuilder.fromUriString("http://USER_SERVICE/user?name={name}")
+                .build()
+                .expand("lala")
+                .encode();
+
+URI uri = uriComponents.toUri();
+
+restTemplate.getForEntity(uri,User.class);
+```
+
+
