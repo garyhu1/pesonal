@@ -14,8 +14,8 @@ import java.util.Arrays;
  * @since: 2018/11/22 0022
  * @decription: 切面类
  */
-//@Configuration
-//@Aspect
+@Configuration
+@Aspect
 public class AopConfig {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AopConfig.class);
