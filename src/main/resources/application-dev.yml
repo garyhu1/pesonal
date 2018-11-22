@@ -30,14 +30,18 @@ spring:
          max-file-size: 2000Mb          # 默认为1M
          max-request-size: 2500Mb       #  默认为10M
    datasource:
-      url: jdbc:mysql://127.0.0.1:3306/garyh?characterEncoding=UTF-8
-      username: root
-      password: garyhu
-      driverClassName: com.mysql.jdbc.Driver
-      max-active: 20
-      max-idle: 8
-      min-idle: 8
-      initial-size: 10
+      other:
+         jdbc-url: jdbc:mysql://127.0.0.1:3306/garyh?characterEncoding=UTF-8
+         username: root
+         password: garyhu
+         driverClassName: com.mysql.jdbc.Driver
+         max-active: 20
+         max-idle: 8
+         min-idle: 8
+         initial-size: 10
+   # 缓存配置
+   cache:
+      type: Redis    # 使用Redis作为缓存
    # Redis配置
    redis:
       host: 127.0.0.1
@@ -81,3 +85,8 @@ logging:
       root: INFO
       org.springframework.web.servlet.DispatcherServlet: DEBUG
       org.springframework.cloud.sleuth: DEBUG
+# 自定义一个缓存频道，用于消息的发送和接收
+springtxt:
+   cache:
+      redis:
+         topic: cache

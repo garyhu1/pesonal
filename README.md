@@ -118,3 +118,25 @@ restTemplate.getForEntity(uri,User.class);
 ```
 
 
+## AOP 表达式
+
+`execution(public * *(..))`
+所有的public方法，后面的*号代表类路径和方法名
+`execution(* set*(..))`
+所有set开头的方法
+`execution(public set*(..))`
+所有set开头的public方法
+`execution(public com.garyhu.service.* set*(..))`
+所有set开头的public方法，且位于com.garyhu.service包下
+`target(com.garyhu.service.CommonService)`
+所有实现了CommonService接口的类的方法
+`@target(org.springframework.transaction.annotation.Transaction)`
+所有用@Transaction注解的方法
+`@within(org.springframework.stereotype.Controller)`
+类声明了@Controller的所有方法
+
+
+
+## spring boot 2.0
+
+使用配置的datasource报错，现在是自定义的数据，然后通过类来自动加载，url一定要写成jdbc-url

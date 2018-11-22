@@ -17,6 +17,9 @@ spring:
       max-idle: 8
       min-idle: 8
       initial-size: 10
+   # 缓存配置
+   cache:
+      type: Simple  # 使用自带的缓存，也可以禁止使用缓存，设置为None
    # Redis配置
    redis:
       host: 127.0.0.1

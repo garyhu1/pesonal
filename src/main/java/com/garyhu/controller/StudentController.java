@@ -5,6 +5,8 @@ import com.garyhu.pojo.Result;
 import com.garyhu.repository.StudentRepository;
 import com.garyhu.utils.ResponseUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -30,7 +32,7 @@ public class StudentController {
 
     @GetMapping("/getStudent")
     public Result<Student> getStudent(@RequestParam(value = "id")int id){
-        Student st = studentRepository.findOne(id);
+        Student st = studentRepository.getStudentById(id);
 
         Result success = ResponseUtils.success(st);
 
@@ -70,7 +72,8 @@ public class StudentController {
 
     @GetMapping("/myStudent")
     public Result myStudent(@RequestParam("id") Integer id){
-        Student student = studentRepository.findOne(id);
+
+        Student student = studentRepository.getStudentById(id);
 
         Result result = ResponseUtils.success(student);
         return result;
@@ -92,7 +95,7 @@ public class StudentController {
 
     @GetMapping("/api/student")
     public Student getStudentById(@RequestParam(value = "id",required = true)Integer id){
-        Student s = studentRepository.findOne(id);
+        Student s = studentRepository.getStudentById(id);
         return s;
     }
 }

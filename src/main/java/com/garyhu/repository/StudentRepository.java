@@ -16,6 +16,9 @@ import javax.transaction.Transactional;
 @Transactional
 public interface StudentRepository extends JpaRepository<Student,Integer> {
 
+    @Query(value = "select * from student where id=?1",nativeQuery = true)
+    public Student getStudentById(Integer id);
+
     @Query(value = "select * from student where name=?1 and age=?2",nativeQuery = true)
     public Student getStudentByNameAndAge(String name,Integer age);
 }
