@@ -24,6 +24,10 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     @Query("select u from User u where u.name=?1 and u.departmentId=?2")
     public User findUser(String name,Integer departmentId);
 
+    // 通过名称查询用户
+    @Query(value = "select * from user where name=?1",nativeQuery = true)
+    public User findUserByName(String name);
+
     // 如果比较喜欢SQL写法而不是JPQL,可设置@Query的nativeQuery属性值为true
     @Query(value = "select * from user where name=?1 and department_id=?2",nativeQuery = true)
     public User nativeQuery(String name,Integer departmentId);

@@ -1,10 +1,13 @@
 package com.garyhu.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-public class User {
+public class User implements Serializable{
+
+    private static final long serialVersionId = 123421554235432L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,6 +15,9 @@ public class User {
 
     @Column
     private String name;
+
+    @Column(name = "password")
+    private String password;
 
     @Column(name="create_time")
     private Date createTime;
@@ -23,6 +29,14 @@ public class User {
     // 简化模式
     @Column(name = "department_id")
     Integer departmentId;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public Integer getId() {
         return id;

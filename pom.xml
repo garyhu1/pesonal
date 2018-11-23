@@ -80,6 +80,12 @@
       <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
 
+    <!--session  通过Redis来实现session共享-->
+    <dependency>
+      <groupId>org.springframework.session</groupId>
+      <artifactId>spring-session-data-redis</artifactId>
+    </dependency>
+
     <!-- hot swapping, disable cache for template, enable live reload -->
     <!--多环境部署无法实现，先注释了-->
     <!--<dependency>-->

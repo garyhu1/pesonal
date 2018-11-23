@@ -24,12 +24,12 @@ public class AopConfig {
     public Object simpleAop(final ProceedingJoinPoint pjp)throws Throwable{
         try{
             Object[] args = pjp.getArgs();
-            LOGGER.info("args : ", Arrays.asList(args));
-            System.out.println("args: "+Arrays.asList(args));
+            LOGGER.info("args : {} ", Arrays.asList(args));
+//            System.out.println("args: "+Arrays.asList(args));
             // 调用原来的方法
             Object proceed = pjp.proceed();
-            LOGGER.info("proceed : ", proceed);
-            System.out.println("proceed: "+proceed);
+            LOGGER.info("proceed : {}", proceed);
+//            System.out.println("proceed: "+proceed);
             // 返回原方法的执行结果
             return proceed;
         }catch (Throwable e){

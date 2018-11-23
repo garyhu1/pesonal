@@ -1,11 +1,15 @@
 package com.garyhu.pojo;
 
+import java.io.Serializable;
+
 /**
  * @author : Administrator
  * @decripetion :
  * @since : 2018/10/30
  **/
-public class Book {
+public class Book implements Serializable{
+
+    private static final long serialVersionID = 16298393457L;
 
     private String name;
     private int id;

@@ -42,14 +42,20 @@ spring:
    # 缓存配置
    cache:
       type: Redis    # 使用Redis作为缓存
+   session:
+      store-type: Redis  # 使用Redis缓存session
    # Redis配置
    redis:
       host: 127.0.0.1
       password: Redis!123
       port: 6379
+      timeout: 3000    # 小于等于0的时候Spring boot无法启动
       # 最大连接数
       pool:
          max-active: 8 # 0表示无限制
+         max-idle: 8
+         min-idle: 0
+         max-wait: -1
    # 采用消息中间件来收集时，注释该配置
    #zipkin:
       #base-url: http://localhost:9411 # 指定zipkin的地址
@@ -85,6 +91,7 @@ logging:
       root: INFO
       org.springframework.web.servlet.DispatcherServlet: DEBUG
       org.springframework.cloud.sleuth: DEBUG
+      com.garyhu.controller.SpringSessionController: INFO
 # 自定义一个缓存频道，用于消息的发送和接收
 springtxt:
    cache:
