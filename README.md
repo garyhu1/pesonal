@@ -247,3 +247,30 @@ spring.redis.pool.max-wait=-1
 在UserController的`/signin`接口测试登录保存session
 `/getsession`测试session是否共享
 
+
+## 使用swagger 2
+
+**依赖**
+
+```
+      <dependency>
+          <groupId>io.springfox</groupId>
+          <artifactId>springfox-swagger2</artifactId>
+          <version>2.2.2</version>
+      </dependency>
+      <dependency>
+          <groupId>io.springfox</groupId>
+          <artifactId>springfox-swagger-ui</artifactId>
+          <version>2.2.2</version>
+      </dependency>
+```
+
+**在启动页同级目录下创建Swagger2的配置类**
+
+`Swagger2Config`
+
+**注解说明**
+
+`@ApiOperation` : 给API增加说明
+
+`@ApiImplicitParams` 和 `@ApiImplicitParam` : 来给参数增加说明
