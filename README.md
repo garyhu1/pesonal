@@ -274,3 +274,33 @@ spring.redis.pool.max-wait=-1
 `@ApiOperation` : 给API增加说明
 
 `@ApiImplicitParams` 和 `@ApiImplicitParam` : 来给参数增加说明
+
+## redis
+
+**启动服务端：**
+
+`redis-server.exe redis.windows.conf`
+
+**启动客户端：**
+
+`redis-cli.exe`
+
+**查看所有配置：**
+
+`config get *`
+
+**设置密码：**
+
+`config set requirepass *****`(**** 代表需要设置的密码，自定义)
+
+**登录：**
+
+`auth ****`(**** 代表你需要登录的密码)
+
+## JWT 生成token的验证：
+
+`JWTHelper` : 生成token 和解析token
+
+`AccountController` : 登录接口生成token
+
+`HttpBearerAuthorizeAttribute` : 拦截作用，来验证token

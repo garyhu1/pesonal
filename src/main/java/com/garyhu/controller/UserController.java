@@ -158,10 +158,11 @@ public class UserController  {
     @GetMapping("/getUsers")
     @ApiOperation(value = "根据role获取所有用户")
     @ApiImplicitParam(name = "role",value = "用户角色",dataType = "String")
-    public Result<User> getUsersByRole(@RequestParam String role){
-        User user = userService.getUserByName(role);
+    @ResponseBody
+    public Result getUsersByRole(@RequestParam String role){
+        List<User> users = userService.getUsersByRole(role);
 
-        return ResponseUtils.success(user);
+        return ResponseUtils.success(users);
     }
 
 

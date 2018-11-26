@@ -40,15 +40,15 @@ public class PersonalApplication extends SpringBootServletInitializer {
         return new RestTemplate();
     }
 
-//    @Bean
-//    public FilterRegistrationBean jwtFilterRegisterBean(){
-//        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
-//        HttpBearerAuthorizeAttribute httpBearerFilter = new HttpBearerAuthorizeAttribute();
-//        registrationBean.setFilter(httpBearerFilter);
-//
-//        List<String> urlPatterns = new ArrayList<>();
-//        urlPatterns.add("/user/getUsers");
-//        registrationBean.setUrlPatterns(urlPatterns);
-//        return registrationBean;
-//    }
+    @Bean
+    public FilterRegistrationBean jwtFilterRegisterBean(){
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+        HttpBearerAuthorizeAttribute httpBearerFilter = new HttpBearerAuthorizeAttribute();
+        registrationBean.setFilter(httpBearerFilter);
+
+        List<String> urlPatterns = new ArrayList<>();
+        urlPatterns.add("/user/getUsers");
+        registrationBean.setUrlPatterns(urlPatterns);
+        return registrationBean;
+    }
 }
