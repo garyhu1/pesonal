@@ -2,10 +2,12 @@ package com.garyhu.service;
 
 import com.garyhu.entity.User;
 import com.garyhu.repository.UserRepository;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -44,5 +46,19 @@ public class UserService {
         User u = userRepository.save(user);
 
         return u;
+    }
+
+    public List<User> getUsersByRole(String role){
+        final User user = new User();
+        user.setRole(role);
+        Example<User> ex = Example.of(user);
+        List<User> users = userRepository.findAll(ex);
+
+        return users;
+    }
+
+    public User getUserByName(String name){
+        User user = userRepository.findUserByName(name);
+        return user;
     }
 }
