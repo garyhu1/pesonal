@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.cloud:spring-cloud-sleuth-core:2.0.3.BUILD-SNAPSHOT">
     <CLASSES>
-      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-sleuth-core/2.0.3.BUILD-SNAPSHOT/spring-cloud-sleuth-core-2.0.3.BUILD-20181122.225259-234.jar!/" />
+      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-sleuth-core/2.0.3.BUILD-SNAPSHOT/spring-cloud-sleuth-core-2.0.3.BUILD-20181125.075301-253.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-sleuth-core/2.0.3.BUILD-SNAPSHOT/spring-cloud-sleuth-core-2.0.3.BUILD-20181122.225259-234-javadoc.jar!/" />
+      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-sleuth-core/2.0.3.BUILD-SNAPSHOT/spring-cloud-sleuth-core-2.0.3.BUILD-20181125.075301-253-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-sleuth-core/2.0.3.BUILD-SNAPSHOT/spring-cloud-sleuth-core-2.0.3.BUILD-20181122.225259-234-sources.jar!/" />
+      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-sleuth-core/2.0.3.BUILD-SNAPSHOT/spring-cloud-sleuth-core-2.0.3.BUILD-20181125.075301-253-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
