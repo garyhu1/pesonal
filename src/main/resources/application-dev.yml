@@ -97,3 +97,9 @@ springtxt:
    cache:
       redis:
          topic: cache
+# 用户登录认证信息
+audience:
+   clientId: 098f6bcd4621d373cade4e832627b4f6
+   base64Secret: MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=
+   name: restspiuser
+   expiresSeconds: 172800

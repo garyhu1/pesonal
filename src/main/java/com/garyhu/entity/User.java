@@ -19,6 +19,9 @@ public class User implements Serializable{
     @Column(name = "password")
     private String password;
 
+    @Column
+    private String role;
+
     @Column(name="create_time")
     private Date createTime;
 
@@ -68,5 +71,13 @@ public class User implements Serializable{
 
     public void setDepartmentId(Integer departmentId) {
         this.departmentId = departmentId;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

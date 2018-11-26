@@ -4,6 +4,7 @@ import com.garyhu.entity.User;
 import com.garyhu.pojo.*;
 import com.garyhu.service.UserService;
 import com.garyhu.utils.ResponseUtils;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -152,6 +154,16 @@ public class UserController  {
 
         return "没有登录成功！";
     }
+
+    @GetMapping("/getUsers")
+    @ApiOperation(value = "根据role获取所有用户")
+    @ApiImplicitParam(name = "role",value = "用户角色",dataType = "String")
+    public Result<User> getUsersByRole(@RequestParam String role){
+        User user = userService.getUserByName(role);
+
+        return ResponseUtils.success(user);
+    }
+
 
     @GetMapping("/login.html")
     @ApiOperation(value = "跳转到登录界面",notes = "")
