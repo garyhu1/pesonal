@@ -1,5 +1,5 @@
 server:
-   port: 8099
+   port: 80
    #address: 服务器IP绑定地址,如果你的主机上有多个网卡，可以绑定一个IP地址
    #contextPath: Spring Boot 应用的上下文
    #session:
@@ -33,7 +33,7 @@ spring:
       other:
          jdbc-url: jdbc:mysql://127.0.0.1:3306/garyh?characterEncoding=UTF-8
          username: root
-         password: admin
+         password: garyhu
          driverClassName: com.mysql.jdbc.Driver
          max-active: 20
          max-idle: 8
@@ -103,3 +103,16 @@ audience:
    base64Secret: MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=
    name: restspiuser
    expiresSeconds: 172800
+garyhu:
+   security:
+      code:
+         image:
+            width: 90
+            height: 20
+            length: 4
+            expireIn: 30
+            url: /code/*
+      session:
+         maximumSessions: 1
+         maxSessionsPreventsLogin: false
+      loginType: JSON

@@ -1,13 +1,11 @@
 package com.garyhu.pojo;
 
-import lombok.Data;
 
 /**
  * @author: garyhu
  * @since: 2018/10/26 0026
  * @decription:
  */
-@Data
 public class Result<T> {
     private int code;
     private String message;
