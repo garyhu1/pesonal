@@ -101,7 +101,7 @@ public class LoginController {
      * @param map
      * @return
      */
-    @GetMapping(value = "/garyhu/socialRegister")
+    @GetMapping(value = "/socialRegister")
     public ModelAndView socialRegister(HttpServletRequest request, Map<String, Object> map) {
         SocialUserInfo userInfo = new SocialUserInfo();
         Connection<?> connection = providerSignInUtils.getConnectionFromSession(new ServletWebRequest(request));
