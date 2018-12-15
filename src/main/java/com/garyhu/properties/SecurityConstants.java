@@ -51,12 +51,12 @@ public interface SecurityConstants {
     /**
      * qq appID
      */
-    String DEFAULT_SOCIAL_QQ_APP_ID = "101448999";
+    String DEFAULT_SOCIAL_QQ_APP_ID = "101530793";
 
     /**
      * qq appsECRET
      */
-    String DEFAULT_SOCIAL_QQ_APP_SECRET = "1d958787a87559bad371c0a9e26eef61";
+    String DEFAULT_SOCIAL_QQ_APP_SECRET = "7ccfaafaeae008cc130ac1fb3e2b5c40";
 
     /**
      * weibo appID

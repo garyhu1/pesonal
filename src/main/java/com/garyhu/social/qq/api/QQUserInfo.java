@@ -87,6 +87,8 @@ public class QQUserInfo {
      */
     private String is_yellow_year_vip;
 
+    private String constellation;
+
     public String getRet() {
         return ret;
     }
@@ -237,5 +239,13 @@ public class QQUserInfo {
 
     public void setIs_yellow_year_vip(String is_yellow_year_vip) {
         this.is_yellow_year_vip = is_yellow_year_vip;
+    }
+
+    public String getConstellation() {
+        return constellation;
+    }
+
+    public void setConstellation(String constellation) {
+        this.constellation = constellation;
     }
 }

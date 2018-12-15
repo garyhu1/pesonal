@@ -187,3 +187,24 @@ header{
 	color:#AEEEEE;
 }
 
+.qq-png {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(/images/qq.png) no-repeat center;
+}
+
+.weixin-png {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(/images/weixin.png) no-repeat center;
+}
+.weibo-png {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url(/images/weibo.png) no-repeat center;
+}
+
+
