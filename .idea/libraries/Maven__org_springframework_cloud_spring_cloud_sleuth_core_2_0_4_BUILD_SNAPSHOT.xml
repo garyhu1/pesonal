@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.cloud:spring-cloud-sleuth-core:2.0.4.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-sleuth-core/2.0.4.BUILD-SNAPSHOT/spring-cloud-sleuth-core-2.0.4.BUILD-20190228.015301-41.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-sleuth-core/2.0.4.BUILD-SNAPSHOT/spring-cloud-sleuth-core-2.0.4.BUILD-20190228.015301-41-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-sleuth-core/2.0.4.BUILD-SNAPSHOT/spring-cloud-sleuth-core-2.0.4.BUILD-20190228.015301-41-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
