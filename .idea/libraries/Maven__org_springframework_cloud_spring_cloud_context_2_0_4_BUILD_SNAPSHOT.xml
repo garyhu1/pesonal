@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.cloud:spring-cloud-context:2.0.4.BUILD-SNAPSHOT">
     <CLASSES>
-      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-context/2.0.4.BUILD-SNAPSHOT/spring-cloud-context-2.0.4.BUILD-20190228.011002-46.jar!/" />
+      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-context/2.0.4.BUILD-SNAPSHOT/spring-cloud-context-2.0.4.BUILD-20190305.011007-85.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-context/2.0.4.BUILD-SNAPSHOT/spring-cloud-context-2.0.4.BUILD-20190228.011002-46-javadoc.jar!/" />
+      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-context/2.0.4.BUILD-SNAPSHOT/spring-cloud-context-2.0.4.BUILD-20190305.011007-85-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-context/2.0.4.BUILD-SNAPSHOT/spring-cloud-context-2.0.4.BUILD-20190228.011002-46-sources.jar!/" />
+      <root url="jar://D:/maven/repository/org/springframework/cloud/spring-cloud-context/2.0.4.BUILD-SNAPSHOT/spring-cloud-context-2.0.4.BUILD-20190305.011007-85-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
